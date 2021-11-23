@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-mongoose.connect("mongodb+srv://danielremete:Mongodb01@gettingstarted.zd1xl.mongodb.net/userDB?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://"+process.env.MONGODB+"@gettingstarted.zd1xl.mongodb.net/userDB?retryWrites=true&w=majority")
 
 const userSchema = new mongoose.Schema (
   // ez már nem csak egy sima javascript object, hanem ez a egy mongoose schema lett, oje
